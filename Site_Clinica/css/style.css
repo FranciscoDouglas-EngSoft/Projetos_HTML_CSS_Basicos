@@ -98,9 +98,9 @@
     width: 100%;
     min-height: 280px;
     padding: 2rem;
-    background: linear-gradient(135deg, #d1e6f4b5 0%, #f0f4f8a2 100%);
+    background: linear-gradient(135deg, #0a617eb5 0%, #13599ea2 100%);
     border-radius: 20px;
-    color: #1a202c;
+    color: #fff;
     font-size: 1rem;
     text-align: center;
     box-shadow: var(--sombra-elevada);
@@ -156,14 +156,14 @@
 }
 
 .cards_home .cards h3 {
-    color: #0f2027;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .cards_home .cards p {
-    color: #4a5568;
+    color: #fff;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
