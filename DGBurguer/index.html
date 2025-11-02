@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DGBurguer">
+    <meta name="description" content="Site oficial do DGBurguer, oferecendo os melhores hambúrgueres artesanais da cidade.">
+    <meta name="keywords" content="DGBurguer, hambúrguer artesanal, lanches, fast food, delivery, comida deliciosa">
+    <title>DGBurguer - Os Melhores Hambúrgueres Artesanais</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/root_mediascreen.css">
+    <link rel="stylesheet" href="./css/standard.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main id="container">
+        <header id="header">
+            <h1>DGBurguer</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="btn">Fazer Pedido</button>
+            <button class="btn_mobile" aria-label="Menu Mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <section id="home">
+            <div class="content_home">
+                <h2>O Melhor Hambúrguer da Cidade</h2>
+                <p>Venha experimentar os deliciosos hambúrgueres artesanais feitos com ingredientes frescos e de alta qualidade.</p>
+                <p>No <strong>DG-Burguer</strong>, a qualidade e o sabor estão sempre em primeiro lugar!</p>
+                <button class="btn">Fazer Pedido</button>
+            </div>
+
+            <img src="./assets/img/hamburguer/burgue-sem-fundo.png" alt="Amburguer">
+        </section>
+
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <div class="content_sobre">
+                <p>O <strong>DG-Burguer</strong> é uma hamburgueria que preza pela qualidade e sabor de seus produtos. Nossos hambúrgueres são feitos com ingredientes frescos e selecionados, garantindo uma experiência única a cada mordida.</p>
+                <p>Fundada em 2020, nossa missão é proporcionar aos nossos clientes uma refeição deliciosa e memorável, em um ambiente acolhedor e descontraído.</p>
+                <p>Venha nos visitar e descubra por que o <strong>DG-Burguer</strong> é o melhor hambúrguer da cidade!</p>
+            </div>
+
+            <div class="cards_home">
+                <div class="cards">
+                    <div class="micro_cards">
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                        <strong>Qualidade Premium</strong>
+                        <p>Hambúrgueres feitos com ingredientes selecionados e de alta qualidade.</p>
+                    </div>
+                    <div class="micro_cards">
+                        <a href=""><i class="fa-solid fa-clock"></i></a>
+                        <strong>Entrega Rápida</strong>
+                        <p>Receba seu pedido em tempo recorde, com toda a qualidade que você merece.</p>
+                    </div>
+                    <div class="micro_cards">
+                        <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                        <strong>Ambiente Acolhedor</strong>
+                        <p>Um espaço agradável e confortável para você desfrutar de sua refeição.</p>
+                    </div>
+                    <div class="micro_cards">
+                        <a href=""><i class="fa-solid fa-chart-line"></i></i></a>
+                        <strong>Variedade no Cardápio</strong>
+                        <p>Opções para todos os gostos, incluindo vegetarianas e veganas.</p>
+                    </div>
+                </div>
+                <img src="./assets/img/hamburguer/h1.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="content_menu">
+                <input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquisar no cardápio...">
+                <select name="categoria" id="categoria">
+                    <option value="todos">Todas as Categorias</option>
+                    <option value="pizza">🍕 Pizzas</option>
+                    <option value="hamburguer">🍔 Hambúrgueres</option>
+                    <option value="batata">🍟 Batatas Fritas</option>
+                    <option value="refrigerante">🥤 Refrigerantes</option>
+                </select>
+                <button type="button" id="btn-buscar">Buscar</button>
+            </div>
+            <div class="contador-itens" id="contador-itens">
+                <span>Mostrando <strong id="total-visivel">0</strong> de <strong id="total-itens">0</strong> itens</span>
+            </div>
+            
+            <div class="cardapio" id="cardapio">
+                <!-- PIZZAS -->
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/p11.png" alt="Pizza Margherita">
+                    <h3>Pizza Margherita</h3>
+                    <p>Molho de tomate, mussarela, tomate fresco, manjericão e azeite</p>
+                    <span class="preco">R$ 42,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/p12.png" alt="Pizza Calabresa">
+                    <h3>Pizza Calabresa</h3>
+                    <p>Molho de tomate, mussarela, calabresa fatiada e cebola</p>
+                    <span class="preco">R$ 45,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/p13.png" alt="Pizza Portuguesa">
+                    <h3>Pizza Portuguesa</h3>
+                    <p>Molho, mussarela, presunto, ovos, cebola, azeitona e orégano</p>
+                    <span class="preco">R$ 48,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/p14.png" alt="Pizza Quatro Queijos">
+                    <h3>Pizza Quatro Queijos</h3>
+                    <p>Mussarela, gorgonzola, parmesão, catupiry e orégano</p>
+                    <span class="preco">R$ 52,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/p15.png" alt="Pizza Pepperoni">
+                    <h3>Pizza Pepperoni</h3>
+                    <p>Molho especial, mussarela, pepperoni fatiado e orégano</p>
+                    <span class="preco">R$ 46,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="pizza">
+                    <img src="./assets/img/pizzas/pngwing.com.png" alt="Pizza Frango Catupiry">
+                    <h3>Pizza Frango Catupiry</h3>
+                    <p>Molho branco, mussarela, frango desfiado e catupiry cremoso</p>
+                    <span class="preco">R$ 47,90</span>
+                </div>
+
+                <!-- HAMBÚRGUERES -->
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h2.png" alt="Hambúrguer Clássico">
+                    <h3>Hambúrguer Clássico</h3>
+                    <p>Pão, carne 180g, queijo, alface, tomate e molho especial</p>
+                    <span class="preco">R$ 24,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h3.png" alt="Hambúrguer Gourmet">
+                    <h3>Hambúrguer Gourmet</h3>
+                    <p>Pão brioche, carne 200g, queijo brie, rúcula e geleia de pimenta</p>
+                    <span class="preco">R$ 32,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h4.png" alt="Hambúrguer Vegetariano">
+                    <h3>Hambúrguer Vegetariano</h3>
+                    <p>Pão integral, hambúrguer de grão-de-bico, queijo, alface e tomate</p>
+                    <span class="preco">R$ 26,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h5.png" alt="Hambúrguer de Frango">
+                    <h3>Hambúrguer de Frango</h3>
+                    <p>Pão, frango grelhado 180g, queijo, alface e maionese temperada</p>
+                    <span class="preco">R$ 22,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h1.png" alt="Hambúrguer Bacon">
+                    <h3>Hambúrguer Bacon</h3>
+                    <p>Pão, carne 180g, queijo cheddar, bacon crocante e cebola caramelizada</p>
+                    <span class="preco">R$ 28,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h2.png" alt="Hambúrguer Clássico">
+                    <h3>Hambúrguer Clássico</h3>
+                    <p>Pão, carne 180g, queijo, alface, tomate e molho especial</p>
+                    <span class="preco">R$ 24,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h2.png" alt="Hambúrguer Duplo">
+                    <h3>Hambúrguer Duplo</h3>
+                    <p>Pão, 2 carnes 180g cada, queijo duplo, alface, tomate e molho especial</p>
+                    <span class="preco">R$ 34,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h3.png" alt="Hambúrguer BBQ">
+                    <h3>Hambúrguer BBQ</h3>
+                    <p>Pão, carne 180g, queijo, bacon, cebola crispy e molho barbecue</p>
+                    <span class="preco">R$ 29,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="hamburguer">
+                    <img src="./assets/img/hamburguer/h4.png" alt="Hambúrguer Vegano">
+                    <h3>Hambúrguer Vegano</h3>
+                    <p>Pão vegano, hambúrguer de lentilha, alface, tomate e molho vegano</p>
+                    <span class="preco">R$ 27,90</span>
+                </div>
+
+                <!-- BATATAS FRITAS -->
+                <div class="card_cadap" data-categoria="batata">
+                    <img src="./assets/img/batata/b6.png" alt="Batata Frita Tradicional">
+                    <h3>Batata Frita Tradicional</h3>
+                    <p>Batatas fritas crocantes com sal (porção 400g)</p>
+                    <span class="preco">R$ 15,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="batata">
+                    <img src="./assets/img/batata/b2.png" alt="Batata com Cheddar e Bacon">
+                    <h3>Batata com Cheddar e Bacon</h3>
+                    <p>Batatas fritas cobertas com cheddar cremoso e bacon crocante</p>
+                    <span class="preco">R$ 22,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="batata">
+                    <img src="./assets/img/batata/b3.png" alt="Batata Rústica">
+                    <h3>Batata Rústica</h3>
+                    <p>Batatas rústicas com casca, temperadas com ervas especiais</p>
+                    <span class="preco">R$ 18,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="batata">
+                    <img src="./assets/img/batata/b4.png" alt="Batata Supreme">
+                    <h3>Batata Supreme</h3>
+                    <p>Batatas, cheddar, bacon, calabresa, cebola crispy e molho especial</p>
+                    <span class="preco">R$ 28,90</span>
+                </div>
+
+                <!-- REFRIGERANTES -->
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/ccl.png" alt="Coca-Cola">
+                    <h3>Coca-Cola</h3>
+                    <p>Refrigerante sabor cola 350ml gelado</p>
+                    <span class="preco">R$ 6,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/pps.png" alt="Guaraná Antarctica">
+                    <h3>Guaraná Antarctica</h3>
+                    <p>Refrigerante sabor guaraná 350ml gelado</p>
+                    <span class="preco">R$ 6,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/ft-l.png" alt="Fanta Laranja">
+                    <h3>Fanta Laranja</h3>
+                    <p>Refrigerante sabor laranja 350ml gelado</p>
+                    <span class="preco">R$ 6,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/splat.png" alt="Sprite">
+                    <h3>Sprite</h3>
+                    <p>Refrigerante sabor limão 350ml gelado</p>
+                    <span class="preco">R$ 6,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/cc-g.png" alt="Coca-Cola 2L">
+                    <h3>Coca-Cola 2L</h3>
+                    <p>Refrigerante sabor cola 2 litros gelado</p>
+                    <span class="preco">R$ 12,90</span>
+                </div>
+                <div class="card_cadap" data-categoria="refrigerante">
+                    <img src="./assets/img/refri/ft-g.png" alt="Guaraná Antarctica 2L">
+                    <h3>Guaraná Antarctica 2L</h3>
+                    <p>Refrigerante sabor guaraná 2 litros gelado</p>
+                    <span class="preco">R$ 12,90</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pedido">
+            <h2>Faça seu Pedido</h2>
+            <form class="form-pedido">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço de Entrega</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="produto">Escolha seu Produto</label>
+                    <select id="produto" name="produto" required>
+                        <option value="">Selecione...</option>
+                        <optgroup label="🍕 Pizzas">
+                            <option value="pizza-margherita">Pizza Margherita - R$ 42,90</option>
+                            <option value="pizza-calabresa">Pizza Calabresa - R$ 45,90</option>
+                            <option value="pizza-portuguesa">Pizza Portuguesa - R$ 48,90</option>
+                            <option value="pizza-quatro-queijos">Pizza Quatro Queijos - R$ 52,90</option>
+                            <option value="pizza-pepperoni">Pizza Pepperoni - R$ 46,90</option>
+                            <option value="pizza-frango">Pizza Frango Catupiry - R$ 47,90</option>
+                        </optgroup>
+                        <optgroup label="🍔 Hambúrgueres">
+                            <option value="hamburguer-classico">Hambúrguer Clássico - R$ 24,90</option>
+                            <option value="hamburguer-gourmet">Hambúrguer Gourmet - R$ 32,90</option>
+                            <option value="hamburguer-vegetariano">Hambúrguer Vegetariano - R$ 26,90</option>
+                            <option value="hamburguer-frango">Hambúrguer de Frango - R$ 22,90</option>
+                            <option value="hamburguer-bacon">Hambúrguer Bacon - R$ 28,90</option>
+                            <option value="hamburguer-duplo">Hambúrguer Duplo - R$ 34,90</option>
+                            <option value="hamburguer-bbq">Hambúrguer BBQ - R$ 29,90</option>
+                            <option value="hamburguer-vegano">Hambúrguer Vegano - R$ 27,90</option>
+                        </optgroup>
+                        <optgroup label="🍟 Batatas Fritas">
+                            <option value="batata-tradicional">Batata Frita Tradicional - R$ 15,90</option>
+                            <option value="batata-cheddar">Batata com Cheddar e Bacon - R$ 22,90</option>
+                            <option value="batata-rustica">Batata Rústica - R$ 18,90</option>
+                            <option value="batata-supreme">Batata Supreme - R$ 28,90</option>
+                        </optgroup>
+                        <optgroup label="🥤 Refrigerantes">
+                            <option value="coca-cola">Coca-Cola 350ml - R$ 6,90</option>
+                            <option value="guarana">Guaraná Antarctica 350ml - R$ 6,90</option>
+                            <option value="fanta">Fanta Laranja 350ml - R$ 6,90</option>
+                            <option value="sprite">Sprite 350ml - R$ 6,90</option>
+                            <option value="coca-cola-2l">Coca-Cola 2L - R$ 12,90</option>
+                            <option value="guarana-2l">Guaraná Antarctica 2L - R$ 12,90</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pagamento">Forma de Pagamento</label>
+                        <select id="pagamento" name="pagamento" required>
+                            <option value="">Selecione...</option>
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="cartao">Cartão de Crédito/Débito</option>
+                            <option value="pix">PIX</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Alguma observação sobre seu pedido?"></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Finalizar Pedido</button>
+            </form>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Rua dos Hambúrgueres, 123<br>Centro - Cidade/UF</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(11) 98765-4321<br>(11) 3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>contato@dgburguer.com<br>pedidos@dgburguer.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Seg - Sex: 11h às 23h<br>Sáb - Dom: 12h às 00h</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="form-contato">
+                    <div class="form-group">
+                        <label for="contato-nome">Nome</label>
+                        <input type="text" id="contato-nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contato-email">E-mail</label>
+                        <input type="email" id="contato-email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Qual o assunto?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Botão Voltar ao Topo -->
+        <a href="#home" class="btn-topo" aria-label="Voltar ao topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DGBurguer</h3>
+                    <p>Os melhores hambúrgueres artesanais da cidade, feitos com ingredientes frescos e de alta qualidade.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#pedido">Fazer Pedido</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Horários</h3>
+                    <p><strong>Segunda - Sexta:</strong><br>11:00 - 23:00</p>
+                    <p><strong>Sábado - Domingo:</strong><br>12:00 - 00:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fa-solid fa-phone"></i> (11) 98765-4321</p>
+                    <p><i class="fa-solid fa-envelope"></i> contato@dgburguer.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Rua dos Hambúrgueres, 123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DGBurguer. Todos os direitos reservados. | Desenvolvido com <i class="fa-solid fa-heart"></i> por Francisco Douglas</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+</body>
+</html>

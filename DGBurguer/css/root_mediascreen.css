@@ -1,0 +1,145 @@
+:root{
+    --font-style: "Pacifico", cursive;
+    --font-pag: "Jost", sans-serif;
+    --cor-pag: linear-gradient(120deg, #010101 0%, #282d32 100%);
+    --cor-header: linear-gradient(120deg, rgba(17, 16, 16, 0.95) 0%, rgba(27, 33, 47, 0.95) 100%);
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --cor-style: #61ff22;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+@media screen  and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Animações */
+
+@keyframes btnPulse {
+    to {
+        box-shadow: 0 0 20px rgba(97, 255, 34, 0.7);
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 15px rgb(26, 69, 28);
+    }
+}
+
+@keyframes pulse_image{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Container vindo da ESQUERDA */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Container vindo de BAIXO para CIMA */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Com bounce (efeito de salto) */
+@keyframes slideInUpBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Com escala */
+@keyframes slideInUpScale {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Movimento mais longo e suave */
+@keyframes slideInUpSmooth {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Com rotação */
+@keyframes slideInUpRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
