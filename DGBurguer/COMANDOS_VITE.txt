@@ -1,0 +1,23 @@
+# 🚀 Script de Criação Rápida - DGBurguer com Vite
+
+## Execute estes comandos em sequência no PowerShell:
+
+# 1. Navegar para a pasta de projetos
+cd "g:\Projetos_HTML_CSS_Basicos"
+
+# 2. Criar projeto Vite com React
+npm create vite@latest dgburguer-vite -- --template react
+
+# 3. Entrar na pasta do projeto
+cd dgburguer-vite
+
+# 4. Instalar dependências principais
+npm install
+
+# 5. Instalar bibliotecas adicionais
+npm install react-router-dom framer-motion react-toastify react-hook-form react-icons
+
+# 6. Iniciar servidor de desenvolvimento
+npm run dev
+
+# ✅ Pronto! O projeto estará rodando em http://localhost:5173
